@@ -76,12 +76,10 @@ def kurang(matrixPuzzle):
 
 def isSolveable(matrixPuzzle):
     sum = kurang(matrixPuzzle)
-    print(sum)
     for i in range(4):
         for j in range(4):
             if matrixPuzzle[i][j] == 16:
                 sum += (i+j)%2
-    print(sum)
     return sum % 2 == 0
 
 
@@ -221,7 +219,7 @@ def branchAndBound(matrixPuzzle):
 
 def main():
     matrixPuzzle = []
-    readFile(matrixPuzzle, "3.txt")
+    readFile(matrixPuzzle, "5.txt")
     
     if (isSolveable(matrixPuzzle)):
         tStart = time.time()
